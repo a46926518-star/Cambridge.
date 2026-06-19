@@ -2,6 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import ArizaViewSet, SavolViewSet, KursViewSet, NatijaViewSet, SavolJavobViewSet
 
+
 router = DefaultRouter()
 router.register(r'arizalar', ArizaViewSet)
 router.register(r'savollar', SavolViewSet)
