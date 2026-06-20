@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.urls import path, include
 from django.contrib import admin
+from django.shortcuts import redirect # Yangi import
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
+    path('', lambda request: redirect('swagger-ui')), # Bosh sahifani Swagger'ga yo'naltiradi
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
