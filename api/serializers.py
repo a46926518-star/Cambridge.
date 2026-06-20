@@ -22,6 +22,6 @@ class NatijaSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class SavolJavobSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Meta: 
         model = SavolJavob
         fields = '__all__'
